@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Alkalami&family=Lato&family=Merriweather&family=Mukta:wght@400;500&family=Noto+Sans+Mono&family=Open+Sans&family=Oswald:wght@400;500;600&family=Roboto+Slab&family=Roboto:ital@1&family=Source+Sans+Pro:ital,wght@0,400;1,300;1,400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgb(244,246,249);
+}
+
+.bg-green1{
+    background-color: #5bba47;
+}
+
+.btn-width{
+    width: 80px !important;
+}
+
+.menu{
+    position: absolute;
+    cursor: pointer ;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.sidebar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.sidebar{
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 270px;
+    z-index: 1000;
+    overflow-y: scroll;
+    transition: all .3s;
+}
+
+.main {
+    margin-left: 270px;
+    transition: margin-left .3s;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh !important;
+}
+
+footer {
+    margin-top: auto !important;
+    padding: 20px;
+}
+
+.sidebar-change-1 {
+    left: -290px;
+}
+
+.main-change-1 {
+    margin-left: 0px;
+}
+
+
+.logoContainer {
+    margin-top: 15px;
+    /* background-color: rgba(0, 128, 0, 0.797); */
+    background-color: rgba(220, 11, 11, 0.842);
+    border-radius: 10px;
+    color: white;
+}
+
+.logoContainer > a {
+    display: inline-block;
+    width: 100% !important;
+}
+
+.linkHeader {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.link {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 6px;
+    width: 100%;
+    transition: all .2s;
+}
+
+
+.link:hover {
+    background-color: rgba(220, 11, 11, 0.842);
+    color: white;
+    border-radius: 10px;
+}
+
+
+.fonts {
+    font-family: 'Abyssinica SIL', serif;
+    font-family: 'Alkalami', serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Noto Sans Mono', monospace;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/* start  */
+.color-1 {
+    color: red;
+}
+.color-2 {
+    color: skyblue;
+}
+.fs {
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.logo-1, .logo-2 {
+    font-size: 40px;
+    font-style: italic;
+
+}
+.logo-1 {
+    color: red;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: red;
+}
+.logo-2 {
+    color: skyblue;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: rgba(131, 76, 174, 0.972);
+}
+
+/* end  */
+
+
+@media screen and (max-width: 992px) {
+    .sidebar{
+        position: absolute !important;
+        top: 0;
+        left: -290px;
+    }
+    .main {
+        margin-left: 0;
+    }
+    .sidebar-change-2 {
+        left: 0;
+    }
+}
