@@ -114,12 +114,12 @@ class BlogApiController extends Controller
     }
 
     public function latest () {
-        $blogs = Blog::latest()->take(3)->get();
+        $blogs = Blog::where('visible', true)->where('status', true)->latest()->take(3)->get();
         return $this->success(BlogResource::collection($blogs), 'Get latest blogs', 200);
     }
 
     public function random () {
-        $blogs = Blog::all()->random(3);
+        $blogs = Blog::all()->where('visible', true)->where('status', true)->random(6);
         return $this->success(BlogResource::collection($blogs), 'Get random blogs', 200);
     }
 

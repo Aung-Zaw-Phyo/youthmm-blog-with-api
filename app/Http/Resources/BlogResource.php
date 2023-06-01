@@ -22,14 +22,17 @@ class BlogResource extends JsonResource
             $path = null;
         }
 
+        $comments = CommentResource::collection($this->comments);
+
         return [
             'id' => $this->id,
             'title' => $this->title,
             'body' => $this->body,
-            'category' => Category::find($this->category_id)->name,
-            'author' => User::find($this->user_id)->name,
+            'category' => $this->category->name,
+            'author' => $this->user->name,
             'thumbnail' => $path,
-            'createdAt' => $this->created_at
+            'createdAt' => $this->created_at->diffForHumans(),
+            'comments' => $comments
         ];
     }
 }

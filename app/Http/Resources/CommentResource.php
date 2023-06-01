@@ -15,12 +15,10 @@ class CommentResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->id,
             'body' => $this->body,
-            'blogId' => $this->blog_id,
-            'userId' => $this->user_id,
-            'createdAt' => $this->created_at,
-            'user' => new UserResource($this->user)
+            'createdAt' => $this->created_at->diffForHumans(),
+            'user' => $this->user->name,
+            'profile' => $this->user->profile ? asset("uploads/profiles").'/'.$this->user->profile : null
         ];
     }
 }

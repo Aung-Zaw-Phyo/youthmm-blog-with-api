@@ -128,6 +128,7 @@
                 e.preventDefault();
                 $('button').attr('disabled', '');
                 let formData = new FormData($('#name_edit_form')[0]);
+                console.log(formData)
                 $.ajax({
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
